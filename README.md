@@ -23,6 +23,7 @@
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
+- Responsive Design
 
 ### What I learned
 
