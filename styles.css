@@ -1,0 +1,205 @@
+:root {
+  --clr-primary: hsl(225, 100%, 94%);
+  --clr-secondary: hsl(245, 75%, 52%);
+  --clr-neutral-900: hsl(223, 47%, 23%);
+  --clr-neutral-400: hsl(227, 16%, 60%);
+  --clr-neutral-100: hsl(225, 100%, 98%);
+
+  --fw-regular: 500;
+  --fw-bold: 700;
+  --fw-very-bold: 900;
+
+  --ff-accent: "Red Hat Display", sans-serif;
+}
+
+/*1. Use a more-intuitive box-sizing model. */
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+}
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Gerneral Styling */
+
+body {
+  font-family: var(--ff-accent);
+  font-weight: var(--fw-regular);
+  color: var(--clr-neutral-400);
+  background-color: var(--clr-primary);
+
+  /* For This Project Only */
+
+  display: grid;
+  place-content: center;
+  margin: 1rem;
+}
+
+/* Utilities */
+
+.flex-group {
+  background-color: hsl(227, 100%, 97%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  max-width: 80%;
+  border-radius: 0.5rem;
+  margin: 1.5rem;
+  padding: 1rem;
+}
+
+/* Card */
+
+.card {
+  background-color: var(--clr-neutral-100);
+  border-radius: 1rem;
+  box-shadow: 0px 10px 20px rgba(160, 160, 160, 0.3);
+  min-width: 345px;
+}
+
+.card__title {
+  text-align: center;
+  margin: 1.5rem auto;
+  color: var(--clr-neutral-900);
+  font-weight: var(--fw-very-bold);
+}
+
+.text {
+  padding-inline: 2.2rem;
+  text-align: center;
+}
+
+.change-link {
+  font-weight: var(--fw-bold);
+  margin-left: 1.3rem;
+}
+
+.change-link:hover {
+  text-decoration: none;
+  opacity: 0.5;
+}
+
+.plan-price {
+  color: var(--clr-neutral-900);
+  font-weight: var(--fw-very-bold);
+}
+
+/* Buttons */
+
+.btns {
+  font-weight: var(--fw-very-bold);
+  margin: 1.5rem;
+  padding: 2rem 0.1rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.payment-btn {
+  background-color: var(--clr-secondary);
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1.2rem 1.5rem;
+  margin-inline: 0.5rem;
+  font-size: 1rem;
+  box-shadow: 0px 10px 20px rgba(77, 77, 77, 0.3);
+  cursor: pointer;
+}
+
+.payment-btn:hover {
+  opacity: 0.6;
+}
+
+.cancel-order {
+  background-color: var(--clr-neutral-100);
+  border: none;
+  color: var(--clr-neutral-400);
+  cursor: pointer;
+}
+
+.cancel-order:hover {
+  color: #333;
+}
+/* Media Queries */
+@media screen and (min-width: 477px) {
+  .card {
+    max-width: 450px;
+  }
+
+  .text {
+    padding-inline: 2.8rem;
+  }
+
+  .change-link {
+    margin-left: 5rem;
+  }
+}
+
+@media screen and (min-height: 667px) {
+  .card,
+  .card__img {
+    overflow: hidden;
+  }
+}
+
+@media screen and (min-width: 1444px) {
+  body {
+    background-image: url(images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
